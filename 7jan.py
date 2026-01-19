@@ -62,3 +62,4 @@ print("original matrix : \n",a)
 # print(np.sort(a))  # row  wise 
 # print(np.sort(a,axis=0))
 # print(np.sort(a,axis=1))
+
