@@ -1,23 +1,23 @@
 import  numpy as  np 
 # load txt  :
 
-"""
-data = np.loadtxt("1.txt")
+
+"""data = np.loadtxt("1.txt")
 print("student  data  : \n",data)
 """ 
 # specific row and col  : 
-"""
-col =np.loadtxt("1.txt",usecols=(0,1))
+
+"""col =np.loadtxt("1.txt",usecols=(0,1),dtype=int)
 print(col)
 """
 # skid header row : 
-"""
-skip =np.loadtxt("1.txt",skiprows=1)
+
+"""skip =np.loadtxt("1.txt",skiprows=1)  
 print(skip)
 """
 # change in data type  : 
-"""
-data =np.loadtxt("1.txt",dtype=str)
+
+"""data =np.loadtxt("1.txt",dtype=str)
 print(data)
 """
 #unpack columns : 
@@ -30,6 +30,7 @@ print("\nsub1 : \n",sub1)
 
 # genfromtxt : 
 
-data =np.genfromtxt("2.txt",delimiter=",",names=True,encoding="utf-8",filling_values=0,dtype=None,usecols=(1,2))
+data =np.genfromtxt("2.txt",delimiter=",",names=True,encoding="utf-8",filling_values=0,dtype=None,usecols=(0,1))
 print(data)
+
 # print(data["salary"])
