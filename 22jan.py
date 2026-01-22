@@ -1,5 +1,5 @@
 import numpy as np 
-
+import matplotlib.pyplot as plt
 """
 broadcasting: it is  ability to perfrom operations on array of diiferent shapes without manually copying the data.  
 
@@ -59,9 +59,65 @@ print(a+b)
 # yes  broadcasting  is  possible
 """
 # ex :3 
+"""
 a=np.arange(1,10).reshape(3,3)
 b=np.arange(3,10,3).reshape(3,1)
 
 print("a: \n",a)
 print("b: \n",b)
 print(a+b)
+"""
+
+# pip install matplotlib 
+
+"""virat_rohit=plt.imread("virat_rohit.jpg")
+plt.imsave("virat_rohit.jpg",virat_rohit)
+plt.imshow(virat_rohit)
+plt.show()
+"""
+# print(virat_rohit)  # virat rohit is a matrix   ==> R G B   
+
+# reverse image : 
+"""
+virat_rohit=plt.imread("virat_rohit.jpg")
+plt.imsave("virat_rohit.jpg",virat_rohit)
+v_r =virat_rohit[: : -1,: ,:]
+plt.imshow(v_r)
+plt.show()
+"""
+
+# mirror image :
+
+"""
+virat_rohit=plt.imread("virat_rohit.jpg")
+plt.imsave("virat_rohit.jpg",virat_rohit)
+mirror =virat_rohit[: ,::-1 ,:]
+plt.imshow(mirror)
+plt.show()
+"""
+
+# cropped image :
+
+"""
+virat_rohit=plt.imread("virat_rohit.jpg")
+plt.imsave("virat_rohit.jpg",virat_rohit)
+crop =virat_rohit[50 :300,  ::-1,:]
+plt.imshow(crop)
+plt.show()
+"""
+
+# reduce  quality  : 
+"""
+virat_rohit=plt.imread("virat_rohit.jpg")
+plt.imsave("virat_rohit.jpg",virat_rohit)
+reduce_quality =virat_rohit[ : :10,  ::10,:]
+plt.imshow(reduce_quality)
+plt.show()
+"""
+
+# color : 
+virat_rohit=plt.imread("virat_rohit.jpg")
+plt.imsave("virat_rohit.jpg",virat_rohit)
+color =virat_rohit[ :,:,::-1 ]
+plt.imshow(color)
+plt.show()
