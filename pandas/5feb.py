@@ -11,7 +11,8 @@ pandas :
 
 import  pandas as pd 
 
-"""s=pd.Series([1,2,3,4,5,6,7,8,9,10])
+"""
+s=pd.Series([1,2,3,4,5,6,7,8,9,10])
 print(s)
 
 s1=pd.Series([1,2,3,4,5],index=['a','b','c','d','e'])
@@ -69,7 +70,7 @@ print(s[s>=30])
 
 # airthematic : 
 
-users =pd.Series([21,22,23,24,25],index=["priyanshi","shalin","vijay","ankit","shivani"])
+"""users =pd.Series([21,22,23,24,25],index=["priyanshi","shalin","vijay","ankit","shivani"])
 
 # print(users.sample())
 # print(users+1)
@@ -79,10 +80,61 @@ users =pd.Series([21,22,23,24,25],index=["priyanshi","shalin","vijay","ankit","s
 
 match1 =pd.Series([100,200,300,400,500],index=['a','b','c','d','e'])
 match2=pd.Series([100,200,300,400,500],index=['x','b','c','d','e'])
+
 print("original match1 : \n",match1)
 print("original match2 : \n",match2)
 
-print("addition : \n",match1+match2)
+# print("addition : \n",match1+match2)
 
+result = match1.add(match2,fill_value=100)
+print("addition : \n",result)
 
+"""
 
+# statistics :
+
+"""
+s=pd.Series([1,2,3,4,5,6,7,8,9,10])
+
+print(s)
+print(s.sum())
+print(s.mean())
+print(s.std())
+print(s.min())
+print(s.max())
+print(s.median())
+print(s.var())
+print(s.std())
+"""
+
+# missing values :
+
+"""s=pd.Series([10,20,30,0,None,50,None])  # np.nan  ==> none 
+print(s)
+
+print(s.isnull())
+print(s.isnull().sum())
+print(s.notnull())
+print(s.notnull().sum())
+
+s= s.fillna(0)
+print(s)
+print(s.isnull().sum())
+
+s=s.dropna()
+print(s)
+
+"""
+
+# sort :
+
+s=pd.Series([10,20,11,22,0,30,45,50],index=["z","b","c","a","d","e","f","g"])
+
+# print(s)
+# print(s.sort_values())
+# print(s.sort_values(ascending=True))
+# print(s.sort_values(ascending=False))
+
+print(s.sort_index())
+print(s.sort_index(ascending=True))
+print(s.sort_index(ascending=False))
