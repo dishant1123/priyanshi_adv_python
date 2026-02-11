@@ -135,6 +135,7 @@ s=pd.Series([10,20,11,22,0,30,45,50],index=["z","b","c","a","d","e","f","g"])
 # print(s.sort_values(ascending=True))
 # print(s.sort_values(ascending=False))
 
-print(s.sort_index())
-print(s.sort_index(ascending=True))
-print(s.sort_index(ascending=False))
+# print(s.sort_index())
+# print(s.sort_index(ascending=True))
+# print(s.sort_index(ascending=False))
+
