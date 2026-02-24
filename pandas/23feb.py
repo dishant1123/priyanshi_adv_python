@@ -34,5 +34,19 @@ print(df)
 # df=df.rename(columns={"age":"student_age"})
 # print(df)
 
-df = pd.read_csv("Movieratingdata1.csv")
+"""df = pd.read_csv("Movieratingdata1.csv")
+print(df)
+
+print(df.head())
+print(df.tail())
+df = df[["GENRES","RATING"]]
+print(df)
+
+"""
+
+df =pd.read_csv("Movieratingdata1.csv")
+
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
+
 print(df)
