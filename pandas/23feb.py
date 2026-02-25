@@ -46,7 +46,29 @@ print(df)
 
 df =pd.read_csv("Movieratingdata1.csv")
 
-pd.set_option('display.max_columns', None)
-pd.set_option('display.max_rows', None)
+# pd.set_option('display.max_columns', None)
+# pd.set_option('display.max_rows', None)
 
-print(df)
+df.replace(["not available","not mension","not value"],np.nan,inplace=True)
+# print(df)
+
+# df.fillna(value =0,inplace=True)
+# df.fillna({"MOVIE_ID":0},inplace=True)
+
+# df["RATING"] =df["RATING"].astype(float)  # error ==> bcz of not available is string data type. 
+# df["RATING"] = df["RATING"].fillna(df["RATING"].mean())
+
+df.fillna(value =0,inplace=True)
+# print(df)
+
+df['PRODUCTION_YEAR'] = df['PRODUCTION_YEAR'].astype(int)
+df["RATING"] =df["RATING"].astype(float)
+
+# print(df['PRODUCTION_YEAR']>2015)
+
+# data = df[df['PRODUCTION_YEAR']>2015]
+
+# data = df[(df['PRODUCTION_YEAR']>2015) & (df['RATING']>4)]
+
+data = df[df['GENRES'].str.contains("war",na=True)]
+print(data)
