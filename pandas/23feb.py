@@ -72,3 +72,4 @@ df["RATING"] =df["RATING"].astype(float)
 
 data = df[df['GENRES'].str.contains("war",na=True)]
 print(data)
+
