@@ -30,5 +30,9 @@ explicit index : start with any number. (we define as we want)  : loc
 """
 task :1 year ==2001 and continent ==india , year country ,life_exp gdp_cap
 """
+"""
 result =df.loc[(df['year']==1997)  | (df['country']=='India') ,['year','country','life_exp','gdp_cap']]
 print(result)
+"""
+# task :2  display life_exp >35 and country name   
+
