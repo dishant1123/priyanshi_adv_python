@@ -20,6 +20,5 @@ a= pd.DataFrame([[0,1,2,np.nan,5],[2,0,1,5,np.nan],[5,0,1,np.nan,5],[2,0,1,np.na
 # a.drop_duplicates(subset=[1,2],inplace=True)
 # a.drop_duplicates(subset=[3,4],inplace=True)
 # a.dropna(thresh =2,axis=1,inplace=True)
-
-
 print(a)
+
