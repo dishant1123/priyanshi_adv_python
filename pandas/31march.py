@@ -42,4 +42,11 @@ print("specific columns : \n",new_col)
 new_col = df.filter(like='pr')
 new_col = df.filter(regex='^s')
 
-print("specific columns : \n",new_col)
+print("specific columns : \n",new_col) 
+
+"""
+1. using mckinsey.csv 
+2. using  apply function  add new column if life_exp>80 then high else low  
+3. using filter function  print only  print specific col. 
+
+"""
